@@ -78,6 +78,7 @@ Route::middleware([
             Route::get("invoices/create", Invoice\CreateController::class)->name("invoices.create");
             Route::get("invoices/{id}", Invoice\ReadController::class)->name("invoices.read");
             Route::put("invoices/{id}", Invoice\UpdateController::class)->name("invoices.update");
+            Route::patch("invoices/{id}/payment-status", Invoice\PaymentStatusController::class)->name("invoices.payment-status");
             Route::delete("invoices/{id}", Invoice\DeleteController::class)->name("invoices.delete");
             Route::get("invoices/{id}/edit", Invoice\EditController::class)->name("invoices.edit");
             Route::post("invoices", Invoice\StoreController::class)->name("invoices.store");
